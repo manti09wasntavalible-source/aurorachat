@@ -33,7 +33,7 @@ def process_chat_message(client_socket, message, client_ip):
 
     if TERMINATION_TRIGGER in message_strip:
         try:
-            farewell_message = "No no, we aren't doxxers here. Restart if you wanna come back"
+            farewell_message = "get that guy out o' here"
             client_socket.sendall(farewell_message.encode('utf-8'))
         except Exception:
             pass 
@@ -115,11 +115,11 @@ def handle_client(client_socket, client_address):
             if message_to_process:
                 process_chat_message(client_socket, message_to_process, client_ip) 
     except ConnectionResetError:
-        print("Connection error from someplace: Connection reset or forced disconnect.")
+        print("Connection error from something: Connection reset or forced disconnect.")
     except socket.timeout:
         print("Connection error from something: Timeout.")
     except Exception as err:
-        print(f"Connection error from... you tell me because I forgot. OOOH I FORGOT I FORGOT I FORGOT I FORGOT I FORGOT: {err}", file=sys.stderr)
+        print(f"Connection error from... you tell me i forgot: {err}", file=sys.stderr)
     finally:
         remove_client(client_socket)
 

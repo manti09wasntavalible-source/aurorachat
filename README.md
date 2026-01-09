@@ -1,54 +1,160 @@
-<h1>aurorachat</h1>
-A chatting application for the Nintendo 3DS and 2DS line of systems
+<h1 align="center">aurorachat</h1>
+<p align="center">A chatting application for the Nintendo 3DS and 2DS line of systems</p>
 
 
-[Join our Discord!](https://discord.gg/dCSgz7KERv)
+<div align="center">
+  <a href="https://discord.gg/dCSgz7KERv">Join our Discord!</a> &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/ItsFuntum/aurorachat-wiiu">Wii U client</a>
+</div>
+
+‎
+<div align="center">
+  <h2>Where can I download stable builds?</h2>
+  <p>Go to our <a href="https://github.com/mii-man/aurorachat/releases">GitHub Releases!</a></p>
+</div>
+<div align="center">‎ 
+  ‎ <h2>Where can I get immediate, easy builds?</h2>
+  ‎ <p>Github Actions automatically provides us with builds! <a href="https://github.com/mii-man/aurorachat/actions/workflows/build.yml">Choose the latest run and download the build in the Summary page!</a></p>
+</div>
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
 
 
-Also check out the [Wii U client](https://github.com/ItsFuntum/aurorachat-wiiu) by @ItsFuntum
 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
 
+<h1 align="center">Welcome to the aurorachat repository!</h1>
+This repository is <b>open</b> for contributions! If you'd like to, you may open a PR or an issue, contributing helps us as we develop aurorachat!
 
-# Security
-We are currently working on end-to-end encryption (actually I don't know that you can call it that or not) that will prevent MITM (Man In The Middle) attacks and protect our users.
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ <div align="center">
+  <details>
+  <summary><strong>Development Log</strong></summary>
+  
+  | Version | Status | Changelog |
+  |--------|--------|--------|
+  | v0.0.4.0 | In development | TLS verification, accounts, audio, GUI overhaul |
+  | v0.0.3.9 | Maybe it was the friends we made along the way | Encryption, console-specific IDs |
+  | v0.0.3.4 | Released | PC Client, security improvements as well as a stack increase |
+  | v0.0.3.3 | Released | Fixed crash from duplicate theme text |
+  | v0.0.3.2 | Released | Added 3 themes, improved theme manager |
+  | v0.0.3.1 | Released | Added 2 themes, code fixes |
+  | v0.0.3 | Released | Added theme support |
+  | v0.0.2.5 | Released | Extended name length |
+  | v0.0.2.4 | Released | Fixed metadata implementation |
+  | v0.0.2.3 | Released | Initial metadata support |
+  | v0.0.2.2 | Released | Fixed RAM issue (audio temporarily removed) |
+  | v0.0.2.1 | Released | Fixed 3DS audio playback |
+  | v0.0.2 | Released | Full code revamp with secure hbchat base |
+  | v0.0.1 | Unreleased | Code revamp using citro2d (im not rewriting the yappery 😔) |
+  | v0.0.0 | Unreleased | I have no idea. |
+  
+  </details>
+</div>
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ ‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+‎ 
+<h1 align="center">How to build aurorachat</h1>
 
-Current ETA: Soon (trust bro)
+Install devkitpro with the 3DS dev tools, then execute the following commands (you'll have to adjust them if you're using mac or linux)
 
+```sh
+pacman -S 3ds-opusfile
+git clone https://github.com/mii-man/aurorachat
+cd aurorachat
+make
+```
 
-<h2>Development Log</h2>
-<ul>
-<li>v0.0.3.9 (unreleased, indev, slowly progressing) - Added awesome encryption and console-specific IDs.</li>
-<li>v0.0.3.4 - Security stuff and stack boostage. First release of the PC Client!</li>
-<li>v0.0.3.3 - Fixed a crash relating to duplicate theme text.</li>
-<li>v0.0.3.2 - Added 3 more themes and fixed up the theme manager</li>
-<li>v0.0.3.1 - Added 2 more themes and fixed some issues with the code</li>
-<li>v0.0.3 - Added themes.</li>
-<li>v0.0.2.5 - Extended name length</li>
-<li>v0.0.2.3 and v0.0.2.4 - Added metadata (first incorrectly, then correctly.)</li>
-<li>v0.0.2.2 - Fixed an issue with what we think is RAM allocation. Fixed through removing audio.</li>
-<li>v0.0.2.1 - Fixed an audio issue on the 3DS client.</li>
-<li>v0.0.2 - Full Code Revamp 2 using a securer version of hbchat as a base.</li>
-<li>v0.0.1 (unreleased, never fully developed) - Full Code Revamp due to me realising that citro2d has better text than the console. Also added a messsage sound from LINE (the texting app) to make the message sound. (Edit as of 10/22/25 AEDT: I'm using self made sound effects for sending and receiving messages)</li>
-<li>v0.0.0 (unreleased) - I have no idea.</li>
-</ul>
-<h2>Welcome to the AuroraChat Repository!</h2>
-<p>If you want to help me with this project, then sure! You can do that :D</p>
-<p>Again, please look at VirtuallyExisting's profile as he inspired me to make this, and he is making a successor to hbchat.</p>
+(At least that's what I think you gotta do)
 
-Note (From Virtualle): I have not given up on Let's Chat, I'm just helping mii-man get a good running start with aurorachat, and I'm bored, of course I'm still actively developing Let's Chat because it is my main focus, helping aurorachat is just a side-project for me, but still done regardless.
-
-I feel like aurorachat and Let's Chat's existences are kind of like Juxt and other miiverse clones, they exist, but they help each other out from time to time.
-
-(shortly after, I realized there are no remaining miiverse clones 💀)
-
-Note (from hackertron): I don't really have anything better to do, but I help out virtualle with his projects so I will also be here assisting. This doesn't mean I'm working on aurorachat because I "have" to, basically copy and paste Virtualle's note except I don't develop Let's Chat
 
 ## checklist if it was evil
 - [X] basic chatting 
 - [X] awesome themes
 - [ ] awesome encryption
-- [ ] Console + Account linking through data unique to your console being transmitted over an unbreakable encryption system (awesome)
-- [ ] account stuff
-- [ ] other stuff
-- [ ] sound stuff
+- [X] account stuff
+- [ ] other stuff<!-- virt did account and sound stuff, its just not in release -->
+- [X] sound stuff
+- [ ] advanced chating
 - [ ] and all the stuff that we forgot 
